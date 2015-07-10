@@ -7,15 +7,12 @@
     <title>Open HQ</title>
   </head>
   <body>
-    <% if flash.has?(:error) %>
-      <div class="notification error">
-        <%= flash[:error] %>
-      </div>
-    <% end %>
-    <% if flash.has?(:notice) %>
-      <div class="notification notice">
-        <%= flash[:notice] %>
-      </div>
+    <% [:notice, :error].each do |key| %>
+      <% if flash.has? key %>
+        <div class="notification <%= key %>">
+          <%= flash[key] %>
+        </div>
+      <% end %>
     <% end %>
 
     <%= yield %>
