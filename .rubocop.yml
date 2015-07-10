@@ -2,6 +2,7 @@ AllCops:
   DisplayCopNames: true
   Exclude:
     - 'spec/spec_helper.rb'
+    - 'vendor/**/*'
 Metrics/MethodLength:
   Max: 20
 Style/Documentation:
