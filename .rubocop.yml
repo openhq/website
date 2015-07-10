@@ -1,0 +1,12 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'spec/spec_helper.rb'
+Metrics/MethodLength:
+  Max: 20
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false

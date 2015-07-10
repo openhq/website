@@ -17,7 +17,7 @@ class App < Hobbit::Base
   use Rack::Session::Cookie, secret: ENV["SESSION_SECRET"]
   use Rack::Protection
   use Rack::Protection::AuthenticityToken
-  use Rack::Flash, :accessorize => [:notice, :error]
+  use Rack::Flash, accessorize: [:notice, :error]
 
   def flash
     env['x-rack.flash']
@@ -36,7 +36,7 @@ class App < Hobbit::Base
   post '/newsletter' do
     subscriber = request.params["email"]
     mailgun = Mailgun(api_key: ENV["MAILGUN_API_KEY"])
-    mailgun.list_members("newsletter@#{ENV["MAILGUN_DOMAIN"]}").add(subscriber)
+    mailgun.list_members("newsletter@#{ENV['MAILGUN_DOMAIN']}").add(subscriber)
 
     flash[:notice] = "Thanks for signing up! We’ll be in touch soon."
     response.redirect "/"
