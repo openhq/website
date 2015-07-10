@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.2.0"
 
 gem "hobbit"
+gem "tilt"
 gem "hobbit-contrib", require: "hobbit/contrib"
 gem "rack-protection"
 gem "rack-flash3"

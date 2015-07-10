@@ -58,6 +58,7 @@ GEM
       rack (~> 1.0)
     sprockets-helpers (1.2.1)
       sprockets (>= 2.2)
+    tilt (2.0.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -78,3 +79,4 @@ DEPENDENCIES
   sass
   sprockets
   sprockets-helpers
+  tilt
