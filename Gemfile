@@ -12,6 +12,7 @@ gem "dotenv"
 gem "sass"
 gem "sprockets"
 gem "sprockets-helpers"
+gem "puma"
 
 group :test do
   gem "rspec"

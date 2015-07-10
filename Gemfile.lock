@@ -21,6 +21,8 @@ GEM
     parser (2.2.2.6)
       ast (>= 1.1, < 3.0)
     powerpack (0.1.1)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     rack (1.6.4)
     rack-flash3 (1.0.5)
       rack
@@ -71,6 +73,7 @@ DEPENDENCIES
   hobbit
   hobbit-contrib
   mailgun
+  puma
   rack-flash3
   rack-protection
   rack-test
