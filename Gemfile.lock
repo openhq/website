@@ -1,0 +1,57 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.5)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.0.1)
+    hobbit (0.6.0)
+      rack
+    hobbit-contrib (0.7.1)
+      hobbit
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    mailgun (0.8)
+      rest-client
+    mime-types (2.6.1)
+    netrc (0.10.3)
+    rack (1.6.4)
+    rack-flash3 (1.0.5)
+      rack
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  hobbit
+  hobbit-contrib
+  mailgun
+  rack-flash3
+  rack-protection
+  rack-test
+  rspec

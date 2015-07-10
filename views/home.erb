@@ -1,0 +1,8 @@
+<h1>Open HQ</h1>
+
+<form class="newsletter-signup" action="newsletter" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= session[:csrf] %>">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="you@domain.com">
+  <input type="submit" name="submit" value="Subscribe">
+</form>

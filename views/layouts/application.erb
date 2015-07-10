@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="<%= session[:csrf] %>">
+    <title>Open HQ</title>
+  </head>
+  <body>
+    <% if flash.has?(:error) %>
+      <div class="notification error">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+    <% if flash.has?(:notice) %>
+      <div class="notification notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
