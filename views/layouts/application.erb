@@ -5,16 +5,38 @@
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="<%= session[:csrf] %>">
     <title>Open HQ</title>
-  </head>
-  <body>
-    <% [:notice, :error].each do |key| %>
-      <% if flash.has? key %>
-        <div class="notification <%= key %>">
-          <%= flash[key] %>
-        </div>
-      <% end %>
-    <% end %>
 
-    <%= yield %>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+    <%= stylesheet_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Open HQ</h1>
+      </div>
+    </header>
+
+    <section class="body">
+      <div class="container">
+        <% [:notice, :error].each do |key| %>
+          <% if flash.has? key %>
+            <div class="notification <%= key %>">
+              <%= flash[key] %>
+            </div>
+          <% end %>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        &copy; Copyright 2015 Open HQ
+      </div>
+    </footer>
+
+    <%= javascript_tag 'application' %>
   </body>
 </html>

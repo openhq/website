@@ -2,15 +2,18 @@ require 'hobbit'
 require 'hobbit/contrib'
 require 'rack/protection'
 require 'rack/flash'
-require 'dotenv'
 require 'mailgun'
+require 'dotenv'
+require_relative 'helpers/assets_helper'
 
-Dotenv.load
+# Loads environment variables fom .env file
+Dotenv.load if ENV["RACK_ENV"] == "development"
 
 class App < Hobbit::Base
   include Hobbit::ErrorHandling
   include Hobbit::Render
   include Hobbit::Session
+  include AssetsHelper
   use Rack::Session::Cookie, secret: ENV["SESSION_SECRET"]
   use Rack::Protection
   use Rack::Protection::AuthenticityToken

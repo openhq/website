@@ -39,6 +39,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    sprockets (3.2.0)
+      rack (~> 1.0)
+    sprockets-helpers (1.2.1)
+      sprockets (>= 2.2)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -55,3 +59,5 @@ DEPENDENCIES
   rack-protection
   rack-test
   rspec
+  sprockets
+  sprockets-helpers

@@ -7,10 +7,10 @@ gem "hobbit-contrib", require: "hobbit/contrib"
 gem "rack-protection"
 gem "rack-flash3"
 gem "mailgun"
-
-group :development do
-  gem "dotenv"
-end
+gem "dotenv"
+gem "sass"
+gem "sprockets"
+gem "sprockets-helpers"
 
 group :test do
   gem "rspec"
