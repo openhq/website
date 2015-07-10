@@ -33,6 +33,12 @@ class App < Hobbit::Base
     response.redirect "/"
   end
 
+  # Temp until site is ready to go live
+  get "/robots.txt" do
+    response["Content-Type"] = "text/plain"
+    "User-agent: *\nDisallow: /"
+  end
+
   get '/' do
     render "home"
   end
