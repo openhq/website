@@ -6,3 +6,11 @@ script:
 - bundle exec rubocop
 - bundle exec rspec
 sudo: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: gRIz9AGI61WqPGvBRYnO6va9apGZohZepVZbwPuJM5dPl37NXKUMDT4s3HBo5EVX5ghKrKtLJSTzJyTyaNqpcBcFiG0798J4C9TOtXzAUQytxVsoF/ZGBOzCrWJPmtV2hDEd82Il+T5aUlPpcYDRzFKJNXbfWkdhK3+gfLcU3h7dg/2Ggmlts8RdsnYsc/GJL4BighMNC8RZLNwy1wvjCofPfiuXUNQjTstiTUD0D1qPB7DFV30jtfYq3D6fizKjKFmMjNx7wlpLjor0iBpSI9/erIUQaSfD7AquLnnLGmUBGccOjHHnRMYXMXQPUtnHmuao4XvEgtAxBwakpwGTDBoBtcvIz4BmWa5bbOEOSSD+3KxYXwn5oDMn0i/320ysRyPAfggh7QmoZtE5HF9MdC5hcV5Sv4G+Kvxp9Gnc+N8xdQjxWFwdBJbhcvA1CExf2L1Fpi7t4oSK5Op/FJrubTZ0XPq1jsvQ/4SS4VtmZRO7Dqdq6xiU0iOs0rU9/CgxFqhZCOXIye5qIzZtiWS2jP/fuomC2NV4SkUol4HqD6iLB/ZXGO4xs9FaG03PNl3zG7IdoqUN8vUAoWYJgFQ2o9i8kz9BgLJUr9p2fOqzCpseYcSrzkxRP9R85Jhf+A8ksBZJVxxKBDTDLnoHG98U71jOlKofOPpugfJdECPxMSc=
+  app: openhq-website
+  on:
+    branch: master
+    repo: openhq/website
