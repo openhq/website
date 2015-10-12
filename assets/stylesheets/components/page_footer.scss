@@ -1,0 +1,19 @@
+.page-footer {
+  font-size: 13px;
+  margin: 30px 0;
+
+  ul {
+    display: block;
+    list-style: none;
+    text-align: center;
+  }
+  ul > li {
+    display: inline-block;
+    padding: 6px 10px;
+    border-right: solid 1px #efefef;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

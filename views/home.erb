@@ -1,9 +1,24 @@
 <h1>Free, Open Source project managment software that doesn’t suck</h1>
 
-<h2>Request early access</h2>
+<a class="deploy-button" href="https://github.com/openhq/openhq/wiki/Deploy-to-heroku">
+  <span class="icon"></span>
+  <span class="text">Deploy now</span>
+</a>
+
+<div class="page-break"></div>
 
 <form class="newsletter-signup" action="newsletter" method="post">
+  <h2>Stay up to date on Open HQ news</h2>
+
   <input type="hidden" name="authenticity_token" value="<%= session[:csrf] %>">
   <input type="text" id="email" name="email" placeholder="you@domain.com">
   <input type="submit" name="submit" value="Subscribe">
+
+  <% [:notice, :error].each do |key| %>
+    <% if flash.has? key %>
+      <div class="error-notification <%= "-#{key}" %>">
+        <%= flash[key] %>
+      </div>
+    <% end %>
+  <% end %>
 </form>

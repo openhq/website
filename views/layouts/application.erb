@@ -19,21 +19,18 @@
 
     <section class="main-content">
       <div class="container">
-        <% [:notice, :error].each do |key| %>
-          <% if flash.has? key %>
-            <div class="notification <%= key %>">
-              <%= flash[key] %>
-            </div>
-          <% end %>
-        <% end %>
-
         <%= yield %>
       </div>
     </section>
 
-    <footer>
+    <footer class="page-footer">
       <div class="container">
-        &copy; Copyright 2015 Open HQ
+        <ul>
+          <li>&copy; Copyright 2015 Open HQ</li>
+          <li><a href="https://github.com/openhq/openhq/blob/master/LICENSE">License</a></li>
+          <li><a href="https://github.com/openhq/openhq">GitHub</a></li>
+          <li>Built by <a href="https://alternatelabs.co">Alternate Labs</a> + <a href="http://colin-young.co.uk/">Colin Young</a></li>
+        </ul>
       </div>
     </footer>
 

@@ -7,7 +7,7 @@ require 'hobbit'
 require 'hobbit/contrib'
 require 'rack/protection'
 require 'rack/flash'
-require 'mailgun'
+require 'mailchimp'
 require 'dotenv'
 require_relative 'helpers/assets_helper'
 
@@ -28,7 +28,7 @@ class App < Hobbit::Base
     env['x-rack.flash']
   end
 
-  error Mailgun::Error do
+  error Mailchimp::Error do
     exception = env['hobbit.error']
     flash[:error] = exception.message
     response.redirect "/"
@@ -46,8 +46,11 @@ class App < Hobbit::Base
 
   post '/newsletter' do
     subscriber = request.params["email"]
-    mailgun = Mailgun(api_key: ENV["MAILGUN_API_KEY"])
-    mailgun.list_members("newsletter@#{ENV['MAILGUN_DOMAIN']}").add(subscriber)
+    mailchimp  = Mailchimp::API.new(ENV.fetch('MAILCHIMP_API_KEY'))
+    list_id    = ENV.fetch('MAILCHIMP_LIST_ID')
+
+    resp = mailchimp.lists.subscribe(list_id, email: subscriber)
+    p resp
 
     flash[:notice] = "Thanks for signing up! We’ll be in touch soon."
     response.redirect "/"
