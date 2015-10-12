@@ -2,6 +2,7 @@ $LOAD_PATH << File.expand_path('../', __FILE__)
 require 'bundler'
 Bundler.setup :default, ENV['RACK_ENV'].to_sym
 
+require 'erubis'
 require 'hobbit'
 require 'hobbit/contrib'
 require 'rack/protection'
