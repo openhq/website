@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.2.0"
+ruby "2.2.2"
 
 gem "hobbit"
 gem "tilt"
@@ -18,4 +18,11 @@ group :test do
   gem "rspec"
   gem "rack-test"
   gem "rubocop"
+end
+
+group :development do
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-bundler', '~> 1.1.3'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-passenger', '~> 0.1.1'
 end
