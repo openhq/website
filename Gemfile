@@ -4,6 +4,7 @@ ruby "2.2.2"
 
 gem "hobbit"
 gem "tilt"
+gem "erubis"
 gem "hobbit-contrib", require: "hobbit/contrib"
 gem "rack-protection"
 gem "rack-flash3"
