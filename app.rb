@@ -41,7 +41,7 @@ class App < Hobbit::Base
   end
 
   get '/' do
-    render("home", {}, {default_encoding: "UTF-8"})
+    render("home", {}, default_encoding: "UTF-8")
   end
 
   post '/newsletter' do
