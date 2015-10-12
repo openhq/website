@@ -1,3 +1,8 @@
+$font-stack: "Open Sans", Arial, sans-serif;
+$body-copy: #646C71;
+$light-copy: #ABB3B7;
+
+@import "normalize";
 @import "core";
 @import "components/main_header";
 @import "components/main_content";
@@ -5,3 +10,4 @@
 @import "components/page_footer";
 @import "components/deploy_button";
 @import "components/page_break";
+@import "components/app_notification";

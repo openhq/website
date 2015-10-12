@@ -11,13 +11,15 @@
   <h2>Stay up to date on Open HQ news</h2>
 
   <input type="hidden" name="authenticity_token" value="<%= session[:csrf] %>">
-  <input type="text" id="email" name="email" placeholder="you@domain.com">
-  <input type="submit" name="submit" value="Subscribe">
+  <input type="text" id="email" name="email" placeholder="you@domain.com" class="textfield"><!--
+  --><input type="submit" name="submit" value="Subscribe" class="submit">
 
   <% [:notice, :error].each do |key| %>
     <% if flash.has? key %>
-      <div class="error-notification <%= "-#{key}" %>">
-        <%= flash[key] %>
+      <div class="app-notification <%= "-#{key}" %>">
+        <span class="message">
+          <%= flash[key] %>
+        </span>
       </div>
     <% end %>
   <% end %>

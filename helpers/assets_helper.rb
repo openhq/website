@@ -4,6 +4,8 @@ require 'sprockets-helpers'
 module AssetsHelper
   def self.included(target)
     sprockets = Sprockets::Environment.new
+    sprockets.append_path 'vendor/javascripts'
+    sprockets.append_path 'vendor/stylesheets'
     sprockets.append_path 'assets/javascripts'
     sprockets.append_path 'assets/stylesheets'
     sprockets.append_path 'assets/images'

@@ -1,7 +1,12 @@
 body {
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #646C71;
+  font-family: $font-stack;
+  color: $body-copy;
   margin: 0;
+}
+
+input, select, textarea {
+  font-family: $font-stack;
+  font-size: 16px;
 }
 
 .container {
