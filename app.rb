@@ -12,7 +12,7 @@ require 'dotenv'
 require_relative 'helpers/assets_helper'
 
 # Loads environment variables fom .env file
-Dotenv.load if ENV["RACK_ENV"] == "development"
+Dotenv.load if ENV["RACK_ENV"] != "test"
 
 class App < Hobbit::Base
   include Hobbit::ErrorHandling
