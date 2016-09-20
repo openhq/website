@@ -95,6 +95,7 @@ DEPENDENCIES
   hobbit-contrib
   mailchimp-api
   puma
+  rack
   rack-flash3
   rack-protection
   rack-test
