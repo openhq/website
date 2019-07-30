@@ -1,15 +1,67 @@
+inherit_from: .rubocop_relaxed.yml
+
 AllCops:
   DisplayCopNames: true
+  TargetRubyVersion: 2.6
+  Include:
+    - 'app/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'lib/**/*.rake'
+    - 'spec/**/*.rb'
   Exclude:
-    - 'spec/spec_helper.rb'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'db/**/*'
     - 'vendor/**/*'
-Metrics/MethodLength:
-  Max: 20
-Style/Documentation:
-  Enabled: false
+    - 'node_modules/**/*'
 Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/FrozenStringLiteralComment:
   Enabled: false
-Style/AsciiComments:
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+Style/GlobalVars:
   Enabled: false
-Metrics/AbcSize:
-  Max: 25
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+  Exclude:
+    - 'spec/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Style/GuardClause:
+  MinBodyLength: 4
+Style/RaiseArgs:
+  EnforcedStyle: compact
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_perl_names
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+  Enabled: false
+Naming/HeredocDelimiterCase:
+  Enabled: false
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - ip
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+Style/EachWithObject:
+  Enabled: false
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+Naming/PredicateName:
+  NameWhitelist:
+    - has_logo?
+    - has_icon?
+    - has_integration?
+Style/EmptyCaseCondition:
+  Enabled: false
+Style/RescueModifier:
+  Exclude:
+    - app/models/company.rb
+Style/BlockComments:
+  Enabled: false
