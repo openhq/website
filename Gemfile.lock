@@ -22,7 +22,7 @@ GEM
     diff-lcs (1.2.5)
     dotenv (2.0.1)
     erubis (2.7.0)
-    excon (0.45.4)
+    excon (0.71.0)
     hobbit (0.6.0)
       rack
     hobbit-contrib (0.7.1)
