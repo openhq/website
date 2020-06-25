@@ -40,7 +40,7 @@ GEM
     parser (2.6.3.0)
       ast (~> 2.4.0)
     puma (3.11.4)
-    rack (2.0.7)
+    rack (2.1.4)
     rack-flash3 (1.0.5)
       rack
     rack-protection (2.0.5)
