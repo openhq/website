@@ -27,7 +27,8 @@ GEM
       rack
     hobbit-contrib (0.7.1)
       hobbit
-    i18n (0.7.0)
+    i18n (1.10.0)
+      concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.3)
     json (2.1.0)
     mailchimp-api (2.0.6)
